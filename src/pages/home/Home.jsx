@@ -13,7 +13,7 @@ const Home = () => {
       .then((data) => setmydata(data));
   }, []);
 
-   const handleDelete = (item) => {
+  const handleDelete = (item) => {
     fetch(`http://localhost:3100/mydata/${item.id}`, {
       method: "DELETE",
     });
@@ -23,7 +23,7 @@ const Home = () => {
     });
 
     setmydata(newArr);
-  }
+  };
 
   let totalPrice = 0;
   return (
@@ -59,9 +59,9 @@ const Home = () => {
               ${item.price}
             </Typography>
 
-              <IconButton
+            <IconButton
               onClick={() => {
-                handleDelete(item)
+                handleDelete(item);
               }}
               sx={{ position: "absolute", top: "0", right: "0" }}
             >
